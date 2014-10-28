@@ -1,4 +1,406 @@
-<html>
-    <head></head>
-    <body></body>
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Welcome to the Fold</title>
+
+		<meta name="description" content="Welcome to the Fold">
+		<meta name="author" content="Katie Miller (codemiller)">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            .dark {
+                width: 500px !important;
+                margin-left: 700px !important;
+                color: white !important; background: rgba(0,0,0,0.65); 
+            }
+            .white { color: white !important; }
+            .strongblue { color: rgb(156, 208, 255) !important; font-weight: bold !important; }
+            .highlight-blue .current-fragment { background-color: #3333FF !important; }
+            .highlight-green .current-fragment { background-color: #005A1E !important; }
+            .highlight-purple .current-fragment { background-color: #8A2BE2 !important; }
+            .reveal .slides section .fragment.highlight-bg-green,
+            .reveal .slides section .fragment.highlight-bg-blue,
+            .reveal .slides section .fragment.highlight-bg-purple {
+                opacity: 1;
+            }
+            .reveal .slides section .fragment.highlight-bg-green.visible {
+                background-color: #005A1E !important;
+            }
+            .reveal .slides section .fragment.highlight-bg-blue.visible {
+                background-color: #3333FF !important;
+            }
+            .reveal .slides section .fragment.highlight-bg-purple.visible {
+                background-color: #8A2BE2 !important;
+            }
+            .reveal .slides section .fragment.appear {
+                opacity: 0; display: none;  
+            }
+            .reveal .slides section .fragment.appear.visible {
+                opacity: 1; display: inline-block;  
+            }
+            .reveal .slides section .fragment.disappear {
+                opacity: 1;
+            }
+            .reveal .slides section .fragment.disappear.visible {
+                opacity: 0; display: none;
+            }
+            .reveal .slides section .fragment.marker {
+                opacity: inherit;
+            }
+            .reveal .slides section .fragment.marker.visible {
+                opacity: 1;
+            }
+             .reveal .slides section .fragment.blue-bg {
+                opacity: inherit;
+            }
+            .reveal .slides section .fragment.blue-bg.visible {
+                background-color: #3333FF !important;
+            }
+            .reveal .slides section .fragment.purple-bg {
+                opacity: inherit;
+            }
+            .reveal .slides section .fragment.purple-bg.visible {
+                background-color: #8A2BE2 !important;
+            }
+            .reveal .slides section .fragment.green-bg {
+                opacity: inherit;
+            }
+            .reveal .slides section .fragment.green-bg.visible {
+                background-color: #005A1E !important;
+            }
+            .reveal .slides section .fragment.red-bg {
+                opacity: inherit;
+            }
+            .reveal .slides section .fragment.red-bg.visible {
+                background-color: #CC0000 !important;
+            }
+         </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h1>Welcome to the Fold</h1>
+                    <img src="images/paperdollcircle.jpg" width="800px">
+                    <p>
+                        Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)<br>
+                                      <a href="http://openshift.com/" target="_blank">OpenShift</a> Developer Advocate at <a href="http://redhat.com/" target="_blank">Red Hat</a>
+                    </p>
+                </section>
+                <section data-background="images/darkteagarden.jpg"></section>
+                <section data-background="images/paperdollchain.jpg"></section>
+                <section data-background="images/reduce1.jpg"></section>
+                <section data-background="images/reduce2.jpg">
+                    <h2 class="dark">0</h2>
+                </section>
+                <section data-background="images/reduce3.jpg">
+                    <h2 class="dark">+3</h2>
+                </section>
+                <section data-background="images/reduce4.jpg">
+                    <h2 class="dark">+1</h2>
+                </section>
+                <section data-background="images/reduce5.jpg">
+                    <h2 class="dark">+7</h2>
+                </section>
+                <section data-background="images/reduce6.jpg">
+                    <h2 class="dark">+13</h2>
+                </section>
+                <section data-background="images/reduce7.jpg">
+                    <h2 class="dark">+5</h2>
+                </section>
+                <section data-background="images/reduce8.jpg">
+                    <h2 class="dark">+11</h2>
+                </section>
+                <section data-background="images/reduce9.jpg">
+                    <h2 class="dark">+2</h2>
+                </section>
+                <section data-background="images/reduce10.jpg">
+                </section>
+                <section data-background="images/reducebowl.jpg">
+                </section>
+                <section>
+                    <pre style="max-width: 47%; margin-bottom: 0px; display: inline-block;"><code data-noescape class="javascript highlight-green"><span class="fragment" data-fragment-index="0">var list = [3, 1, 7, 13, 5, 11, 2];
+</span><span class="fragment disappear" data-fragment-index="7">
+<span class="fragment" data-fragment-index="1">var acc<span class="fragment appear" data-fragment-index="2"> = 0</span>;</span>
+
+<span class="fragment" data-fragment-index="3">for (var i = 0; i &lt; list.length; i++) { 
+<span class="fragment" data-fragment-index="4">  acc = acc + list[i];</span>
+}</span>
+
+<span class="fragment" data-fragment-index="5">console.log(acc);</span><span class="fragment" data-fragment-index="6"> <span class="comment">// 42</span>
+</span></span>
+<span class="fragment appear" data-fragment-index="7">var sum = <span class="fragment purple-bg" data-fragment-index="19">function (list) {
+  var acc = </span><span class="fragment blue-bg" data-fragment-index="18">0</span><span class="fragment purple-bg" data-fragment-index="19">;
+  for (var i = 0; i &lt; list.length; i++) {
+    acc = </span><span class="fragment blue-bg" data-fragment-index="18">acc + list[i]</span><span class="fragment purple-bg" data-fragment-index="19">;
+  }
+  return acc;
+};</span>
+sum(list); <span class="comment">// 42</span></span></code></pre><pre style="max-width: 47%; margin-left: 5px; margin-bottom: 0px;" class="fragment appear" data-fragment-index="8"><code data-noescape class="javascript"><span class="fragment disappear highlight-green" data-fragment-index="18">
+
+<span class="fragment" data-fragment-index="8">var reverse = function (list) {</span>
+  <span class="fragment" data-fragment-index="9">var acc = [];</span>
+  <span class="fragment" data-fragment-index="10">for (var i = 0; i &lt; list.length; i++) {</span>
+    <span class="fragment appear" data-fragment-index="14">acc = </span><span class="fragment appear" data-fragment-index="12">[</span><span class="fragment appear" data-fragment-index="11">list[i]</span><span class="fragment appear" data-fragment-index="12">]</span><span class="fragment appear" data-fragment-index="13">.concat(acc)</span><span class="fragment appear" data-fragment-index="11">;</span>
+  <span class="fragment" data-fragment-index="10">}</span>
+  <span class="fragment" data-fragment-index="15">return acc;</span>
+<span class="fragment" data-fragment-index="8">};</span>
+<span class="fragment" data-fragment-index="16">reverse(list); // [2, 11, 5, 13, 7, 1, 3]</span></span>
+<span class="fragment appear" data-fragment-index="18">
+var reverse = <span class="fragment purple-bg" data-fragment-index="19">function (list) {
+  var acc = </span><span class="fragment blue-bg" data-fragment-index="18">[]</span><span class="fragment purple-bg" data-fragment-index="19">;
+  for (var i = 0; i &lt; list.length; i++) {
+    acc = </span><span class="fragment blue-bg" data-fragment-index="18">[list[i]].concat(acc)</span><span class="fragment purple-bg" data-fragment-index="19">;
+  }
+  return acc;
+};</span>
+reverse(list); // [2, 11, 5, 13, 7, 1, 3]</span></code></pre><pre style="max-width: 47%; margin-top: 5px;" class="fragment appear redraw" data-fragment-index="17"><code data-noescape class="javascript">
+var sum = <span class="fragment green-bg" data-fragment-index="22">function (acc, list) {
+  if (list.length == 0) { return acc; }
+  return </span><span class="fragment red-bg" data-fragment-index="21">sum</span><span class="fragment green-bg" data-fragment-index="22">(list.slice(1),</span>
+             <span class="fragment blue-bg" data-fragment-index="20">acc + list[0]</span><span class="fragment green-bg" data-fragment-index="22">);
+};</span>
+
+sum(list, <span class="fragment blue-bg" data-fragment-index="20">0</span>); 
+// 42
+</code></pre><pre style="max-width: 47%; margin-top: 5px; margin-left: 5px;" class="fragment appear" data-fragment-index="17"><code data-noescape class="javascript">
+var reverse = <span class="fragment green-bg" data-fragment-index="22">function (acc, list) {
+  if (list.length == 0) { return acc; }
+  return </span><span class="fragment red-bg" data-fragment-index="21">reverse</span><span class="fragment green-bg" data-fragment-index="22">(list.slice(1),</span>
+                 <span class="fragment blue-bg" data-fragment-index="20">[list[0]].concat(acc)</span><span class="fragment green-bg" data-fragment-index="22">);
+};</span>
+
+reverse(list, <span class="fragment blue-bg" data-fragment-index="20">[]</span>); 
+// [2, 11, 5, 13, 7, 1, 3]
+</code></pre>
+                </section>
+                <section>
+                <pre style="max-width: 47%; display: inline-block; margin-bottom: 0px;"><code data-noescape class="javascript">
+var fold = function (<span class="fragment blue-bg" data-fragment-index="1">func</span>, acc, list) {
+  for(var i = 0; i < list.length; i++) {
+    acc = <span class="fragment blue-bg" data-fragment-index="1">func(acc, list[i])</span>;
+  }
+  return acc;
+};</code></pre><pre style="max-width: 47%; margin-left: 5px; margin-bottom: 0px;" class="fragment appear" data-fragment-index="0"><code data-noescape class="javascript">
+var fold = function (<span class="fragment blue-bg" data-fragment-index="1">func</span>, acc, list) {
+  if (list.length == 0) { return acc; }
+  return fold(func, <span class="fragment blue-bg" data-fragment-index="1">func(acc, list[0])</span>, 
+              list.slice(1));
+};
+
+</code></pre><pre style="max-width: 94%; margin-top: 5px;" class="fragment appear redraw" data-fragment-index="2"><code data-noescape class="javascript">
+var sum = function (list) {
+  return fold(<span class="fragment green-bg" data-fragment-index="3">function (acc, elem) { return acc + elem; }</span>, <span class="fragment purple-bg" data-fragment-index="4">0</span>, list);
+};
+
+<span class="fragment" data-fragment-index="5">var reverse = function (list) {
+  return fold(<span class="fragment green-bg" data-fragment-index="6">function (acc, elem) { return [elem].concat(acc); }</span>, <span class="fragment purple-bg" data-fragment-index="7">[]</span>, list);
+};</span>
+</code></pre>
+                </section>
+                <section>
+                    <h2>Higher-Order Function (HOF)</h2>
+                </section>
+                <section>
+                    <div><img src="images/thehoff.jpg" width="700px"/></div>  
+                </section>
+                <section>
+                    <h2>Map</h2>
+                    <pre class="fragment appear redraw" data-fragment-index="0" style="max-width: 60%"><code data-noescape class="javascript">
+var map = function (func, list) {
+  return <span class="fragment green-bg" data-fragment-index="0">fold</span>(function (acc, elem) {  
+    return acc.concat([func(elem)]); 
+  }, [], list);
+};
+
+map(function (elem) { return elem + 1; }, [1, 2, 3]); 
+// [2, 3, 4]
+</code></pre>
+                </section>
+                <section>
+                    <h2>Filter</h2>
+                    <pre class="fragment appear redraw" data-fragment-index="0" style="max-width: 70%"><code data-noescape class="javascript">
+var filter = function (pred, list) {
+  return <span class="fragment green-bg" data-fragment-index="0">fold</span>(function (acc, elem) {  
+    return pred(elem) ? acc.concat([elem]) : acc; 
+  }, [], list);
+};
+
+filter(function (elem) { return elem % 2 == 0; }, [1, 2, 3]); 
+// [2]
+</code></pre>
+                </section>
+                <section>
+                    <h2>Fold</h2>
+                    <h4 class="fragment appear" data-fragment-index="0">aka Reduce, Compress, Inject, Accumulate, Aggregate</h4>
+                    <p>Applies a combining function </br>to each element of a <span class="fragment disappear" data-fragment-index="2"><span class="fragment green-bg" data-fragment-index="1">list</span></span><span class="fragment appear green-bg" data-fragment-index="2">recursive data structure</span> and a partial result </br>to build a single value</p>
+                </section>
+                <section>
+                    <img src="images/catamorphism.jpg" width="800px"/>
+                </section>
+                <section>
+                    <img src="images/functionfamily.png" width="1000px"/>
+                </section>
+                <section>
+                    <h2>Our Fold Function:</h2>
+                    <ul>
+                        <li class="fragment" data-fragment-index="0">Requires a starting value for the accumulator</li>
+                        <li class="fragment" data-fragment-index="1">Is left associative <em>(rather than right associative)</em></li>
+                        <li class="fragment" data-fragment-index="2">Is strictly evaluated <em>(as opposed to lazily)</em></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Initial Accumulator Value</h2>
+                    <ul>
+                        <li class="fragment">Some folds use first element to be processed as starting value</li>
+                        <li class="fragment">Only works for non-empty lists</li>
+                        <li class="fragment">Means return value must be same type as list elements</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Associativity</h2>
+                    <ul style="max-width: 1200px;">
+                        <li class="fragment"><span class="strongblue">Fold left</span> combines the result of recursively combining all elements but the last one, with the last element in the list<span class="fragment"></br>eg: <span class="white">((((0 + 1) + 2) + 3) + 4) + 5</span></span></li>
+                        <li class="fragment"><span class="strongblue">Fold right</span> combines the first element with the result of recursively combining the rest of the list<span class="fragment"></br>eg: <span class="white">1 + (2 + (3 + (4 + (5 + 0))))</span></span></li>
+
+                    </ul>
+                </section>
+                <section>
+                    <p>Fold <span class="strongblue">Left</span> versus <span class="strongblue">Right</span> refers to associativity, </br>not processing order</p>
+                    <pre class="fragment appear redraw" style="max-width: 60%;"><code data-noescape class="javascript">
+<span class="fragment purple-bg">fold</span>(function (func, elem) {
+  return function (acc) {
+    return func(<span class="fragment green-bg">[elem].concat(acc)</span>);
+  };
+}, identity, <span class="fragment blue-bg">[1, 2, 3]</span>)([]); <span class="fragment">// [1, 2, 3] </span>
+
+var identity = function (value) { return value; };
+
+</code></pre>
+                </section>
+                <section>
+                    <p>You can view <span class="strongblue">Fold Left</span> as an iterator with an accumulator parameter<span class="fragment" data-fragment-index="0">, </br>and <span class="strongblue">Fold Right</span> as a structural transformation on the list</span></p>
+                    <span class="fragment" data-fragment-index="1"><img src="images/foldr.png" width="800px"/></span>
+                </section>
+                <section>
+                    <h2>Where to Find Fold</h2>
+                    <ul style="max-width: 1200px;">
+                        <li class="fragment">JavaScript 1.8: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank">Array.prototype.reduce</a>(callback[, initialValue]); <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight" target="_blank">Array.prototype.reduceRight</a>(callback[, initialValue])</li>
+                        <li class="fragment">JS libraries: <a href="http://eliperelman.com/fn.js/" target="_blank">fn.js</a>, <a href="http://osteele.com/sources/javascript/functional/" target="_blank">Functional JavaScript</a>, <a href="http://functionaljs.com" target="_blank">functional.js</a>, <a href="http://danieltao.com/lazy.js/" target="_blank">Lazy.js</a>, <a href="http://lodash.com" target="_blank">Lo-Dash</a>, <a href="http://underscorejs.org" target="_blank">Underscore.js</a>, etc.</li>
+                        <li class="fragment"><a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)#Folds_in_various_languages" target="_blank">Other languages</a>: including Haskell, Scala, Clojure, Common Lisp, Ruby, Python, Java 8, C#, C++, and many others </li>
+                    <ul>
+                </section>
+                <section>
+                    <h2>Related Functions</h2>
+                    <ul>
+                        <li class="fragment"><a href="http://en.wikibooks.org/wiki/Haskell/List_processing#Scans" target="_blank">Scan</a> functions return all the intermediate accumulator values</li>
+                        <li class="fragment"><a href="http://en.wikipedia.org/wiki/Unfold_(higher-order_function)" target="_blank">Unfolds</a> are used for constructing, rather than processing, recursive values</li>
+                    </ul>
+                </section>
+                <section data-background="images/reducebowl.jpg">
+                    <h2 class="dark">Summary</h2>
+                </section>
+                <section>
+                    <h2>Image Credits</h2> 
+                    <ul>
+                        <li><a href="https://commons.wikimedia.org/wiki/File:David_Hasselhoff_Cannes_2013_4.jpg" target="_blank">David Hasselhoff (Georges Biard, CC-BY-SA-3.0)</a></li>
+                        <li><a href="http://openclipart.org" target="_blank">Open Clip Art Library</a></li>
+                        <li><a href="https://www.flickr.com/photos/stopherjones/6885092745/in/photostream/" target="_blank">Paper Dolls [Colorized, Cropped] (Chris Jones, </a><a href="http://creativecommons.org/licenses/by-nc/2.0/legalcode" target="_blank">CC BY-NC 2.0)</a></li>
+                    </ul>
+                </section>  
+                <section>
+                    <h2>References and Resources</h2>
+                    <ul>
+                        <li><a href="http://foldl.com" target="_blank">Foldl.com</a> and <a href="http://foldr.com" target="_blank">Foldr.com</a></li>
+                        <li><a href="http://shop.oreilly.com/product/0636920028857.do" target="_blank">Functional JavaScript</a></li>
+                        <li><a href="http://www.haskell.org/haskellwiki/Fold" target="_blank">Haskell Wiki</a></li>
+                        <li><a href="http://hof.codemiller.com/#/6" target="_blank">Higher-Order Fun</a></li>
+                        <li><a href="http://learnyouahaskell.com/higher-order-functions#folds" target="_blank">Learn You A Haskell</a></li>
+                        <li><a href="http://www.cs.nott.ac.uk/~gmh/fold.pdf" target="_blank">Tutorial on the Universality and Expressiveness of Fold</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)" target="_blank">Wikipedia</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Welcome to the Fold</h1>
+                    <img src="images/paperdollcircle.jpg" width="550px">
+					<h2><a href="http://fold.codemiller.com/">http://fold.codemiller.com</a></h2>
+                    <p>
+                        Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)<br>
+                                      <a href="http://openshift.com/" target="_blank">OpenShift</a> Developer Advocate at <a href="http://redhat.com/" target="_blank">Red Hat</a>
+                    </p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+            });
+
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                var redraws = document.getElementsByClassName('redraw');
+                for (var i = 0; i < redraws.length; i++) {
+                    if (redraws[i] == event.fragment) Reveal.sync();
+                }
+            } );
+		</script>
+
+	</body>
 </html>
