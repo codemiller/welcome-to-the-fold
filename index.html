@@ -308,14 +308,15 @@ var identity = function (value) { return value; };
 </code></pre>
                 </section>
                 <section>
-                    <p>Some view <span class="strongblue">Fold Left</span> as an iterator with an accumulator parameter<span class="fragment" data-fragment-index="0">, </br>and <span class="strongblue">Fold Right</span> as a structural transformation on the list</span></p>
+                    <p>Some view <span class="strongblue">Fold Left</span> as the "fundamental list iterator"<span class="fragment" data-fragment-index="0">, </br>and <span class="strongblue">Fold Right</span> as "the fundamental list recursion operator".</span>
+                    <p class="fragment" data-fragment-index="1">It can be useful to view <span class="strongblue">Fold Right</span> as a structural transformation on a list:</p>
                     <span class="fragment" data-fragment-index="1"><img src="images/foldr.png" width="800px"/></span>
                 </section>
                 <section>
                     <h2>Where to Find Fold</h2>
                     <ul style="max-width: 1200px;">
                         <li class="fragment">JavaScript 1.8: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank">Array.prototype.reduce</a>(callback[, initialValue]); <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight" target="_blank">Array.prototype.reduceRight</a>(callback[, initialValue])</li>
-                        <li class="fragment">JS libraries: <a href="https://github.com/nullobject/fkit" target="_blank">FKit</a>, <a href="http://eliperelman.com/fn.js/" target="_blank">fn.js</a>, <a href="http://osteele.com/sources/javascript/functional/" target="_blank">Functional JavaScript</a>, <a href="http://functionaljs.com" target="_blank">functional.js</a>, <a href="http://danieltao.com/lazy.js/" target="_blank">Lazy.js</a>, <a href="http://lodash.com" target="_blank">Lo-Dash</a>, <a href="http://underscorejs.org" target="_blank">Underscore.js</a>, etc.</li>
+                        <li class="fragment">JS libraries: <a href="https://github.com/nullobject/fkit" target="_blank">FKit</a>, <a href="http://eliperelman.com/fn.js/" target="_blank">fn.js</a>, <a href="http://osteele.com/sources/javascript/functional/" target="_blank">Functional JavaScript</a>, <a href="http://functionaljs.com" target="_blank">functional.js</a>, <a href="http://danieltao.com/lazy.js/" target="_blank">Lazy.js</a>, <a href="http://lodash.com" target="_blank">Lo-Dash</a>, <a href="http://extralogical.net/projects/udon/" target="_blank">Udon</a>, <a href="http://underscorejs.org" target="_blank">Underscore.js</a>, etc.</li>
                         <li class="fragment"><a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)#Folds_in_various_languages" target="_blank">Other languages</a>: including Haskell, Scala, Clojure, Common Lisp, Ruby, Python, Java 8, C#, C++, and many others </li>
                     <ul>
                 </section>
@@ -342,9 +343,10 @@ var identity = function (value) { return value; };
                     <ul>
                         <li><a href="http://foldl.com" target="_blank">Foldl.com</a> and <a href="http://foldr.com" target="_blank">Foldr.com</a></li>
                         <li><a href="http://shop.oreilly.com/product/0636920028857.do" target="_blank">Functional JavaScript</a></li>
-                        <li><a href="http://www.haskell.org/haskellwiki/Fold" target="_blank">Haskell Wiki</a></li>
+                        <li>Haskell Wiki: <a href="http://www.haskell.org/haskellwiki/Fold" target="_blank">Fold Overview</a>; <a href="http://www.haskell.org/haskellwiki/Foldr_Foldl_Foldl'" target="_blank">Foldr, Foldl, Foldl'</a></li>
                         <li><a href="http://hof.codemiller.com/#/6" target="_blank">Higher-Order Fun</a></li>
                         <li><a href="http://learnyouahaskell.com/higher-order-functions#folds" target="_blank">Learn You A Haskell</a></li>
+                        <li>Stack Overflow: <a href="http://stackoverflow.com/questions/1446419/how-do-you-know-when-to-use-fold-left-and-when-to-use-fold-right" target="_blank">Fold Left vs Fold Right</a>; <a href="http://stackoverflow.com/questions/3082324/foldl-versus-foldr-behavior-with-infinite-lists" target="_blank">Foldl v Foldr on Infinite Lists</a></li>
                         <li><a href="http://www.cs.nott.ac.uk/~gmh/fold.pdf" target="_blank">Tutorial on the Universality and Expressiveness of Fold</a></li>
                         <li><a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)" target="_blank">Wikipedia</a></li>
                     </ul>
